@@ -3,7 +3,8 @@ import sys
 from PIL import Image
 import numpy as np
 import math
-from environment.classes import Car, Background
+from environment.classes.Car import Car
+from environment.classes.Background import Background 
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -12,6 +13,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 def check_collision(car, background):
     bounding_box = car.get_bounding_box()
+    # print(bounding_box)
     
     # Check corners of the bounding box
     corners = [

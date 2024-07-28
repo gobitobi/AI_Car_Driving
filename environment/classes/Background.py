@@ -5,7 +5,7 @@ import numpy as np
 import math
 
 class Background:
-    def __init__(self, image_path="track.png"):
+    def __init__(self, image_path="./environment/assets/track.png"):
         self.image_path = image_path
         self.bg = pygame.image.load(self.image_path)
         self.bg_arr = self.convert_image_to_array()

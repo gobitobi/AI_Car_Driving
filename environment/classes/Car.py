@@ -55,6 +55,7 @@ class Car:
         self.y = max(0, min(self.y, self.screen.get_height()))
 
     def get_bounding_box(self):
-        rotated_surface = pygame.transform.rotate(self.original_surface, self.angle)
+        # rotated_surface = pygame.transform.rotate(self.original_surface, self.angle)
+        rotated_surface = pygame.Surface((self.width-20, self.height-20), pygame.SRCALPHA)
         rotated_rect = rotated_surface.get_rect(center=(self.x, self.y))
         return rotated_rect
